@@ -1,27 +1,41 @@
-# SAÉ 2.2 — Mesurer un signal en téléphonie VoIP
+# SAÉ 2.2 · Mesurer un signal en téléphonie VoIP
 
-Projet de première année de BUT Réseaux et Télécommunications.
+> Mesure et comparaison des codecs audio dans un environnement VoIP : latence, quantification, bande passante et rapport signal sur bruit.
 
-## Présentation
+| | |
+|---|---|
+| **Formation** | BUT Réseaux et Télécommunications, Montbéliard |
+| **Année** | 1<sup>re</sup> année, semestre 2 |
+| **Organisation** | En équipe de 3 |
+| **Outils et notions** | `VoIP` `FreePBX` `Linphone` `Raspberry Pi` `GNU Radio` `Codecs` `SNR` |
 
-Caractérisation du son numérisé et comparaison des paramètres de codecs dans un environnement VoIP.
+## Objectif
 
-## Contenu documenté
+Étudier la numérisation du son en téléphonie sur IP et mesurer l’impact du codec sur la qualité perçue.
 
-Configuration d’un environnement VoIP, étude de la latence, de l’échantillonnage, de la bande passante et du rapport signal/bruit. Le rapport présente également une comparaison de la qualité d’écoute.
+## Environnement de test
 
-## Outils et notions
+- Serveur **FreePBX** sur Raspberry Pi
+- Clients **Linphone** sur machines virtuelles Linux
+- Réseau local avec une borne Linksys
 
-- FreePBX
-- Linphone
-- GNU Radio
+## Mesures réalisées
 
-## Organisation
+Latence, plage de tension de la carte son, quantification, fréquence d’échantillonnage, bande passante, rapport signal sur bruit (SNR) et évaluation de la qualité d’écoute, avec comparaison des valeurs théoriques et mesurées.
 
-Projet en autonomie.
+## Conclusion
 
-[Mon portfolio](https://wonderful-chebakia-f83e9d.netlify.app/#projets)
+- **Opus** offre le meilleur compromis : excellente qualité, faible latence et bon SNR.
+- **Speex** est une bonne alternative quand le débit est limité.
+- **PCMU / PCMA**, très répandus, consomment plus de bande passante pour une qualité perçue inférieure.
 
-## Livrables
+## Contenu du dépôt
 
-Le dépôt comprend les fichiers fournis pour cette SAÉ : consignes, comptes rendus, sources, mesures et supports de présentation selon le projet. Les essais incomplets sont conservés. Les noms préfixés correspondent aux dossiers d’origine.
+| Fichier | Description |
+|---|---|
+| [`rapport/rapport-sae-2.2.pdf`](rapport/rapport-sae-2.2.pdf) | Rapport complet (méthodes, calculs, résultats) |
+| [`presentation/presentation-linphone.odp`](presentation/presentation-linphone.odp) | Présentation |
+
+---
+
+<sub>Bastien Lorenzi · BUT Réseaux et Télécommunications, parcours cybersécurité · [Portfolio](https://wonderful-chebakia-f83e9d.netlify.app/#projets) · [Profil GitHub](https://github.com/LORENZI-Bastien)</sub>
